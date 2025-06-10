@@ -1,0 +1,267 @@
+body {
+    font-family: "Roboto";
+    background: #f8f9fa;
+    color: #222;
+    transition: background 0.1s cubic-bezier(.4,0,.2,1), color 0.1s;
+}
+
+body.dark-mode {
+    background: url('assets/darkModeBG.png') center/cover no-repeat fixed, #181a20;
+    color: #f1f1f1;
+    transition: background 0.8s cubic-bezier(.4,0,.2,1), color 0.4s;
+    position: relative;
+}
+
+body.dark-mode::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background: inherit;
+    backdrop-filter: blur(200px);
+    -webkit-backdrop-filter: blur(200px);
+    pointer-events: none;
+}
+
+#darkModeToggle {
+    position: fixed;
+    top: 1.5rem;
+    right: 2rem;
+    z-index: 100;
+    background: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    font-size: 1.5rem;
+    box-shadow: 0 2px 8px #0001;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+body.dark-mode #darkModeToggle {
+    background: #23272f;
+    color: #ffe066;
+}
+
+img {
+    width: 50px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.introduction {
+    display: flex;
+    border-radius: 15px;
+    justify-self: center;
+    align-items: center;
+    gap: 2rem;
+    margin: 2rem auto 2rem auto;
+    max-width: 700px;
+    padding: 2rem 2.5rem;
+    backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(255, 255, 255, 0.55);
+    box-shadow: 0 4px 24px #0002;
+}
+body.dark-mode .introduction {
+    background-color: rgba(35, 39, 47, 0.7);
+}
+
+.profilePhoto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+.profilePhoto img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    box-shadow: 0 2px 12px #0002;
+}
+
+.aboutMe h2 {
+    margin-bottom: 0.5rem;
+}
+
+.myProjects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 3rem 2.5rem;
+    justify-content: center;
+    align-items: start;
+    margin: 2rem auto;
+    max-width: 1100px;
+    width: 100%;
+    justify-items: center;
+}
+
+@media (max-width: 700px) {
+    .myProjects {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 2rem;
+    }
+}
+
+.project {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px #0001;
+    padding: 1.5rem;
+    min-width: 0;
+    width: 100%;
+    max-width: 340px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    transition: background 0.4s;
+    box-sizing: border-box;
+}
+body.dark-mode .project {
+    background: #23272f;
+}
+
+.project img[alt="Project Image"] {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+}
+
+.project span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.project h6 {
+    margin: 0 0.5rem 0 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.project button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.2rem;
+    border-radius: 6px;
+    transition: background 0.2s;
+}
+.project button:hover {
+    background: #f0f0f0;
+}
+body.dark-mode .project button:hover {
+    background: #23272f;
+}
+
+footer {
+    position: static;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 0;
+    margin: 0px;
+    padding: 2rem 4rem 2rem 4rem;
+    background: #23272f;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    z-index: 100;
+}
+body.dark-mode footer {
+    background: #23272f;
+}
+.footer-left {
+    font-size: 1rem;
+    color: #eee;
+    opacity: 0.8;
+    font-weight: 500;
+}
+body.dark-mode .footer-left {
+    color: #eee;
+}
+.footer-socials {
+    display: flex;
+    gap: 1.5rem;
+}
+footer button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+    padding: 0;
+}
+footer button img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+footer button:hover {
+    background: #23272f;
+}
+body.dark-mode footer button:hover {
+    background: #23272f;
+}
+
+h3 {
+    text-align: center;
+    margin-top: 2.5rem;
+    margin-bottom: 1.5rem;
+    padding: 0.5rem 0 0.5rem 0;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+.cool-transition {
+    display: inline-block;
+    transition: transform 0.3s cubic-bezier(.4,2,.6,1), color 0.3s;
+    will-change: transform, color;
+    perspective: 400px;
+}
+
+@media (max-width: 700px) {
+    .introduction {
+        flex-direction: column;
+        align-items: center;
+        padding: 1.2rem;
+        gap: 1.2rem;
+        text-align: center;
+    }
+    .profilePhoto {
+        flex-direction: column;
+        gap: 1.2rem;
+        width: 100%;
+    }
+    .profilePhoto img {
+        width: 110px;
+        height: 110px;
+    }
+    .profilePhoto h1 {
+        display: block;
+        width: 100%;
+        word-break: break-word;
+        font-size: 1.5rem;
+        margin-top: 0.5rem;
+    }
+    .myProjects {
+        flex-direction: column;
+        align-items: center;
+    }
+    .project {
+        width: 95vw;
+        max-width: 340px;
+    }
+}

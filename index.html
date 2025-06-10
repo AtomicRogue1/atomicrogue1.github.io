@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grind 3</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <button id="darkModeToggle" aria-label="Toggle dark mode">🌙</button>
+    <div class="introduction">
+        <div class="profilePhoto">
+            <img src="https://avatars.githubusercontent.com/AtomicRogue1" alt="Profile photo">
+        </div>
+        <div class="aboutMe">
+            <h2>Hello There! I am <span id="glitchName" class="cool-transition">Yash Verma</span> !</h2>
+            <p>Hi! I'm a passionate developer eager to build impactful projects and learn new technologies. Welcome to my portfolio!</p>
+        </div>
+    </div>
+    <h3>My Work</h3>
+    <div class="myProjects">
+        <!-- Example project -->
+        <div class="project">
+            <img src="assets/placeholder.jpg" alt="Project Image">
+            <span>
+                <h6>Awesome Project</h6>
+                <button onclick="window.open('https://github.com/your-github/project', '_blank')" aria-label="View on Github">
+                    <img src="assets/placeholder.jpg" alt="Github">
+                </button>
+                <button onclick="window.open('https://yourproject.com', '_blank')" aria-label="Open project in new window">
+                    <img src="assets/placeholder.jpg" alt="toNewWindow">
+                </button>
+            </span>
+            <p>A short description of your project goes here. Highlight what makes it special!</p>
+        </div>
+        <div class="project">
+            <img src="assets/placeholder.jpg" alt="Project Image">
+            <span>
+                <h6>Awesome Project 2</h6>
+                <button onclick="window.open('https://github.com/your-github/project2', '_blank')" aria-label="View on Github">
+                    <img src="assets/placeholder.jpg" alt="Github">
+                </button>
+                <button onclick="window.open('https://yourproject2.com', '_blank')" aria-label="Open project in new window">
+                    <img src="assets/placeholder.jpg" alt="toNewWindow">
+                </button>
+            </span>
+            <p>A short description of your second awesome project goes here. Highlight what makes it special!</p>
+        </div>
+        <div class="project">
+            <img src="assets/placeholder.jpg" alt="Project Image">
+            <span>
+                <h6>Awesome Project 3</h6>
+                <button onclick="window.open('https://github.com/your-github/project3', '_blank')" aria-label="View on Github">
+                    <img src="assets/placeholder.jpg" alt="Github">
+                </button>
+                <button onclick="window.open('https://yourproject3.com', '_blank')" aria-label="Open project in new window">
+                    <img src="assets/placeholder.jpg" alt="toNewWindow">
+                </button>
+            </span>
+            <p>A short description of your third awesome project goes here. Highlight what makes it special!</p>
+        </div>
+        <!-- Add more projects as needed -->
+    </div>
+    <footer>
+        <span class="footer-left">Created by Yash Verma</span>
+        <span class="footer-socials">
+            <button onclick="window.open('https://github.com/your-github', '_blank')" aria-label="Github">
+                <img src="assets/github.svg" alt="Github">
+            </button>
+            <button onclick="window.open('https://linkedin.com/in/your-linkedin', '_blank')" aria-label="Linkedin">
+                <img src="assets/linkedin.svg" alt="Linkedin">
+            </button>
+            <button onclick="window.open('https://leetcode.com/your-leetcode', '_blank')" aria-label="Leetcode">
+                <img src="assets/leetcode.svg" alt="Leetcode">
+            </button>
+            <button onclick="window.location='mailto:your@email.com'" aria-label="Email">
+                <img src="assets/email.svg" alt="Email">
+            </button>
+        </span>
+    </footer>
+    <script>
+        const toggle = document.getElementById('darkModeToggle');
+        toggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+        });
+
+        // Typewriter effect for span in h2 (aboutMe)
+        const glitchName = document.getElementById('glitchName');
+        const glitchNames = ['Yash Verma', 'AtomicRogue1'];
+        let glitchCurrent = 0;
+        let typing = false;
+
+        function typewriterTransition(from, to, el, cb) {
+            // Erase current text
+            let i = from.length;
+            function erase() {
+                if (i >= 0) {
+                    el.textContent = from.slice(0, i);
+                    i--;
+                    setTimeout(erase, 30);
+                } else {
+                    type();
+                }
+            }
+            // Type new text
+            let j = 0;
+            function type() {
+                if (j <= to.length) {
+                    el.textContent = to.slice(0, j);
+                    j++;
+                    setTimeout(type, 40);
+                } else {
+                    el.style.opacity = '';
+                    if (cb) cb();
+                }
+            }
+            erase();
+        }
+
+        function loopTypewriter() {
+            if (typing) return;
+            typing = true;
+            const next = (glitchCurrent + 1) % glitchNames.length;
+            typewriterTransition(glitchNames[glitchCurrent], glitchNames[next], glitchName, () => {
+                glitchCurrent = next;
+                typing = false;
+            });
+        }
+        setInterval(loopTypewriter, 15000);
+    </script>
+    <style>
+        /* Add to your CSS file: */
+        .cool-transition {
+            display: inline-block;
+            transition: transform 0.3s cubic-bezier(.4, 2, .6, 1), color 0.3s;
+            will-change: transform, color;
+            perspective: 400px;
+        }
+    </style>
+</body>
+
+</html>
