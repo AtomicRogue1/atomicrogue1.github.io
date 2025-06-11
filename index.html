@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grind 3</title>
     <link rel="stylesheet" href="index.css">
+     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" /> 
 </head>
 
 <body>
@@ -19,63 +20,66 @@
             <p>Hi! I'm a passionate developer eager to build impactful projects and learn new technologies. Welcome to my portfolio!</p>
         </div>
     </div>
-    <h3>My Work</h3>
+    <div class="myWork-header-container">
+        <h3>My Work</h3>
+    </div>
     <div class="myProjects">
-        <!-- Example project -->
         <div class="project">
-            <img src="assets/placeholder.jpg" alt="Project Image">
-            <span>
-                <h6>Awesome Project</h6>
-                <button onclick="window.open('https://github.com/your-github/project', '_blank')" aria-label="View on Github">
-                    <img src="assets/placeholder.jpg" alt="Github">
-                </button>
-                <button onclick="window.open('https://yourproject.com', '_blank')" aria-label="Open project in new window">
-                    <img src="assets/placeholder.jpg" alt="toNewWindow">
-                </button>
+            <img src="assets/projectPlaceholder.png" alt="Project Image">
+            <span class="project-header">
+                <h6>ClimaCompass</h6>
+                <span class="project-header-icons">
+                    <button onclick="window.open('https://github.com/AtomicRogue1/ClimaCompass', '_blank')" aria-label="View on Github">
+                        <img class="projectIcons" src="assets/github-mark-white.png" alt="Github">
+                    </button>
+                </span>
             </span>
-            <p>A short description of your project goes here. Highlight what makes it special!</p>
+            <p>Dynamic app that fetches locations and their weather details through OpenWeather API and gives travel suggestions using Ollama API.<br></br>
+Tech: HTML5, CSS3, JavaScript, React.js, REST API</p>
         </div>
         <div class="project">
-            <img src="assets/placeholder.jpg" alt="Project Image">
-            <span>
-                <h6>Awesome Project 2</h6>
-                <button onclick="window.open('https://github.com/your-github/project2', '_blank')" aria-label="View on Github">
-                    <img src="assets/placeholder.jpg" alt="Github">
-                </button>
-                <button onclick="window.open('https://yourproject2.com', '_blank')" aria-label="Open project in new window">
-                    <img src="assets/placeholder.jpg" alt="toNewWindow">
-                </button>
+            <img src="assets/projectPlaceholder.png" alt="Project Image">
+            <span class="project-header">
+                <h6>CamScribbler</h6>
+                <span class="project-header-icons">
+                    <button onclick="window.open('https://github.com/AtomicRogue1/CamScribbler', '_blank')" aria-label="View on Github">
+                        <img class="projectIcons" src="assets/github-mark-white.png" alt="Github">
+                    </button>
+                </span>
             </span>
-            <p>A short description of your second awesome project goes here. Highlight what makes it special!</p>
+            <p>Engineered a deep learning solution capable of detecting the pen tip’s position and
+movements for digital drawing experiences with a stylus detection accuracy was 74.2%.<br></br>
+Tech: Python, OpenCV</p>
         </div>
         <div class="project">
-            <img src="assets/placeholder.jpg" alt="Project Image">
-            <span>
-                <h6>Awesome Project 3</h6>
-                <button onclick="window.open('https://github.com/your-github/project3', '_blank')" aria-label="View on Github">
-                    <img src="assets/placeholder.jpg" alt="Github">
-                </button>
-                <button onclick="window.open('https://yourproject3.com', '_blank')" aria-label="Open project in new window">
-                    <img src="assets/placeholder.jpg" alt="toNewWindow">
-                </button>
+            <img style="object-fit: contain;" src="assets/pongers.png" alt="Project Image">
+            <span class="project-header">
+                <h6>Pongers!</h6>
+                <span class="project-header-icons">
+                    <button onclick="window.open('https://github.com/AtomicRogue1/Pongers', '_blank')" aria-label="View on Github">
+                        <img class="projectIcons" src="assets/github-mark-white.png" alt="Github">
+                    </button>
+                    <button onclick="window.open('https://atomicrogue1.itch.io/pongers', '_blank')" aria-label="Open project in new window">
+                        <img style="border-radius: 0px;" class="projectIcons" src="assets/new-window.svg" alt="toNewWindow">
+                    </button>
+                </span>
             </span>
-            <p>A short description of your third awesome project goes here. Highlight what makes it special!</p>
+            <p>2D Pong game made in the Godot Engine. Opponent AI made using Deterministic Finite Automata.<br></br>Tech: C#, Godot</p>
         </div>
-        <!-- Add more projects as needed -->
     </div>
     <footer>
         <span class="footer-left">Created by Yash Verma</span>
         <span class="footer-socials">
-            <button onclick="window.open('https://github.com/your-github', '_blank')" aria-label="Github">
+            <button onclick="window.open('https://github.com/AtomicRogue1', '_blank')" aria-label="Github">
                 <img src="assets/github.svg" alt="Github">
             </button>
-            <button onclick="window.open('https://linkedin.com/in/your-linkedin', '_blank')" aria-label="Linkedin">
-                <img src="assets/linkedin.svg" alt="Linkedin">
+            <button onclick="window.open('https://www.linkedin.com/in/yash-verma-49b256196/', '_blank')" aria-label="Linkedin">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linkedin/linkedin-original.svg" />
             </button>
-            <button onclick="window.open('https://leetcode.com/your-leetcode', '_blank')" aria-label="Leetcode">
+            <button onclick="window.open('https://leetcode.com/u/AtomicRogue1/', '_blank')" aria-label="Leetcode">
                 <img src="assets/leetcode.svg" alt="Leetcode">
             </button>
-            <button onclick="window.location='mailto:your@email.com'" aria-label="Email">
+            <button onclick="window.location='mailto:developeryash08082001@gmail.com'" aria-label="Email">
                 <img src="assets/email.svg" alt="Email">
             </button>
         </span>
