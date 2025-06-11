@@ -135,21 +135,18 @@ Tech: Python, OpenCV</p>
         </span>
     </footer>
     <script>
-        // Set dark mode by default on page load
         document.body.classList.add('dark-mode');
         const toggle = document.getElementById('darkModeToggle');
         toggle.addEventListener('click', () => {
             document.body.classList.toggle('dark-mode');
         });
 
-        // Typewriter effect for span in h2 (aboutMe)
         const glitchName = document.getElementById('glitchName');
         const glitchNames = ['Yash Verma', 'AtomicRogue1'];
         let glitchCurrent = 0;
         let typing = false;
 
         function typewriterTransition(from, to, el, cb) {
-            // Erase current text
             let i = from.length;
             function erase() {
                 if (i >= 0) {
@@ -160,7 +157,6 @@ Tech: Python, OpenCV</p>
                     type();
                 }
             }
-            // Type new text
             let j = 0;
             function type() {
                 if (j <= to.length) {
@@ -187,7 +183,6 @@ Tech: Python, OpenCV</p>
         setInterval(loopTypewriter, 15000);
     </script>
     <style>
-        /* Add to your CSS file: */
         .cool-transition {
             display: inline-block;
             transition: transform 0.3s cubic-bezier(.4, 2, .6, 1), color 0.3s;
