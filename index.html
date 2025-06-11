@@ -9,7 +9,7 @@
      <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" /> 
 </head>
 
-<body>
+<body class="dark-mode">
     <button id="darkModeToggle" aria-label="Toggle dark mode">🌙</button>
     <div class="introduction">
         <div class="profilePhoto">
@@ -135,6 +135,8 @@ Tech: Python, OpenCV</p>
         </span>
     </footer>
     <script>
+        // Set dark mode by default on page load
+        document.body.classList.add('dark-mode');
         const toggle = document.getElementById('darkModeToggle');
         toggle.addEventListener('click', () => {
             document.body.classList.toggle('dark-mode');
