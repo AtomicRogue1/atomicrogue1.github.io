@@ -386,6 +386,23 @@ body.dark-mode .timeline-section-container {
         height: 40px;
     }
 }
+
+@media (max-width: 550px) {
+    .introduction {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        padding: 1.5rem 1rem;
+        width: 85%;
+    }
+    .profilePhoto {
+        align-items: center;
+    }
+    .aboutMe {
+        text-align: center;
+    }
+}
+
 .timeline-item {
     display: flex;
     flex-direction: column;
