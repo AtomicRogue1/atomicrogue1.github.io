@@ -315,7 +315,7 @@ h3 {
     flex-direction: column;
     align-items: center;
     gap: 1.5rem;
-    overflow-x: visible; /* Allow horizontal overflow, but do not scroll */
+    overflow-x: visible;
 }
 
 body.dark-mode .timeline-section-container {
@@ -346,7 +346,7 @@ body.dark-mode .timeline-section-container {
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 12rem; /* Increased from 3rem to 8rem for huge spacing */
+    gap: 12rem;
     margin: 2rem 0 3rem 0;
     max-width: 900px;
     position: relative;
@@ -354,8 +354,8 @@ body.dark-mode .timeline-section-container {
     overflow-y: visible;
     scroll-behavior: smooth;
     padding-bottom: 2.5rem;
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
 .timeline-gallery::-webkit-scrollbar {
     display: none;
